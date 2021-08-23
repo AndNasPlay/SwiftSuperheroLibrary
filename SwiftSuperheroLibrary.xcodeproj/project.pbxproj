@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12F15A06468030F341E423A9 /* libPods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64DC2B3ACE1C63E3779618F5 /* libPods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.a */; };
+		1641B68C26D3E8B300387758 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B68B26D3E8B300387758 /* ResponseCodable.swift */; };
+		1641B68E26D3E8D700387758 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B68D26D3E8D700387758 /* AbstractRequestFactory.swift */; };
+		1641B69026D3E8F100387758 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B68F26D3E8F100387758 /* RequestRouter.swift */; };
+		1641B69326D3E98300387758 /* HeroCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B69226D3E98300387758 /* HeroCatalog.swift */; };
+		1641B69526D3EA8900387758 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1641B69426D3EA8900387758 /* UserSettings.swift */; };
+		16D463DA26D029A0000B8A4D /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D463D926D029A0000B8A4D /* RequestFactory.swift */; };
+		16D463DC26D0FA3A000B8A4D /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D463DB26D0FA3A000B8A4D /* AbstractErrorParser.swift */; };
+		16D463DE26D0FA55000B8A4D /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D463DD26D0FA55000B8A4D /* ErrorParser.swift */; };
+		16D463E126D0FABF000B8A4D /* CatalogHeroResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D463E026D0FABF000B8A4D /* CatalogHeroResult.swift */; };
+		16D463E326D10274000B8A4D /* CatalogHeroReqestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D463E226D10274000B8A4D /* CatalogHeroReqestFactory.swift */; };
 		16ED41FE26CD5A80005DB034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED41FD26CD5A80005DB034 /* AppDelegate.swift */; };
 		16ED420026CD5A80005DB034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED41FF26CD5A80005DB034 /* SceneDelegate.swift */; };
 		16ED420226CD5A80005DB034 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED420126CD5A80005DB034 /* FirstTableViewController.swift */; };
@@ -18,6 +29,8 @@
 		16ED423526CE5525005DB034 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED423426CE5525005DB034 /* HeroViewController.swift */; };
 		16ED423726CE5550005DB034 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED423626CE5550005DB034 /* HeroView.swift */; };
 		16ED423A26CE5D7F005DB034 /* ResultFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED423926CE5D7F005DB034 /* ResultFirstViewController.swift */; };
+		2D051D4E5681641F860D0C75 /* libPods-SwiftSuperheroLibraryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF021DCB4D5C3CB30EE30D5D /* libPods-SwiftSuperheroLibraryTests.a */; };
+		47CFBF31343835E863B21A02 /* libPods-SwiftSuperheroLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E933F4490EFB44A1B11919 /* libPods-SwiftSuperheroLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1641B68B26D3E8B300387758 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
+		1641B68D26D3E8D700387758 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		1641B68F26D3E8F100387758 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		1641B69226D3E98300387758 /* HeroCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCatalog.swift; sourceTree = "<group>"; };
+		1641B69426D3EA8900387758 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		16D463D926D029A0000B8A4D /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		16D463DB26D0FA3A000B8A4D /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		16D463DD26D0FA55000B8A4D /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		16D463E026D0FABF000B8A4D /* CatalogHeroResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogHeroResult.swift; sourceTree = "<group>"; };
+		16D463E226D10274000B8A4D /* CatalogHeroReqestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogHeroReqestFactory.swift; sourceTree = "<group>"; };
 		16ED41FA26CD5A80005DB034 /* SwiftSuperheroLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSuperheroLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16ED41FD26CD5A80005DB034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16ED41FF26CD5A80005DB034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +78,15 @@
 		16ED423426CE5525005DB034 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		16ED423626CE5550005DB034 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		16ED423926CE5D7F005DB034 /* ResultFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultFirstViewController.swift; sourceTree = "<group>"; };
+		36B541507F9D139E53A00661 /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		574822AD3F806BAF34D764EA /* Pods-SwiftSuperheroLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibrary.release.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibrary/Pods-SwiftSuperheroLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		64DC2B3ACE1C63E3779618F5 /* libPods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2BD66925AC4711C41B8AAC /* Pods-SwiftSuperheroLibraryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibraryTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibraryTests/Pods-SwiftSuperheroLibraryTests.release.xcconfig"; sourceTree = "<group>"; };
+		DD452BF189B3E351D532E613 /* Pods-SwiftSuperheroLibraryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibraryTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibraryTests/Pods-SwiftSuperheroLibraryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E94622228C4714D16B9A2ABD /* Pods-SwiftSuperheroLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibrary.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibrary/Pods-SwiftSuperheroLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		EF021DCB4D5C3CB30EE30D5D /* libPods-SwiftSuperheroLibraryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftSuperheroLibraryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E933F4490EFB44A1B11919 /* libPods-SwiftSuperheroLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftSuperheroLibrary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CF9EA089F2D6082EC2B50C /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47CFBF31343835E863B21A02 /* libPods-SwiftSuperheroLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D051D4E5681641F860D0C75 /* libPods-SwiftSuperheroLibraryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +110,129 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F15A06468030F341E423A9 /* libPods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3EDC2B8DD2489A9DAE3581 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E94622228C4714D16B9A2ABD /* Pods-SwiftSuperheroLibrary.debug.xcconfig */,
+				574822AD3F806BAF34D764EA /* Pods-SwiftSuperheroLibrary.release.xcconfig */,
+				36B541507F9D139E53A00661 /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig */,
+				F8CF9EA089F2D6082EC2B50C /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.release.xcconfig */,
+				DD452BF189B3E351D532E613 /* Pods-SwiftSuperheroLibraryTests.debug.xcconfig */,
+				7F2BD66925AC4711C41B8AAC /* Pods-SwiftSuperheroLibraryTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		0F6E32D09BE919C22F1E557D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7E933F4490EFB44A1B11919 /* libPods-SwiftSuperheroLibrary.a */,
+				64DC2B3ACE1C63E3779618F5 /* libPods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.a */,
+				EF021DCB4D5C3CB30EE30D5D /* libPods-SwiftSuperheroLibraryTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1641B68326D3E75B00387758 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1641B68626D3E7B200387758 /* BusinessLogic */,
+				1641B68726D3E7CF00387758 /* Entity */,
+				1641B69126D3E91D00387758 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1641B68426D3E76F00387758 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		1641B68526D3E78600387758 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16ED420B26CD5A82005DB034 /* LaunchScreen.storyboard */,
+				16ED420926CD5A82005DB034 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1641B68626D3E7B200387758 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				16ED41FD26CD5A80005DB034 /* AppDelegate.swift */,
+				16D463D826D02982000B8A4D /* Network */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		1641B68726D3E7CF00387758 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				16D463E026D0FABF000B8A4D /* CatalogHeroResult.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1641B68826D3E81300387758 /* HeroCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				1641B69226D3E98300387758 /* HeroCatalog.swift */,
+				16D463E226D10274000B8A4D /* CatalogHeroReqestFactory.swift */,
+			);
+			path = HeroCatalog;
+			sourceTree = "<group>";
+		};
+		1641B68926D3E84200387758 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1641B69426D3EA8900387758 /* UserSettings.swift */,
+				16ED41FF26CD5A80005DB034 /* SceneDelegate.swift */,
+				1641B68A26D3E85300387758 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1641B68A26D3E85300387758 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				16D463DB26D0FA3A000B8A4D /* AbstractErrorParser.swift */,
+				16D463DD26D0FA55000B8A4D /* ErrorParser.swift */,
+				1641B68B26D3E8B300387758 /* ResponseCodable.swift */,
+				1641B68D26D3E8D700387758 /* AbstractRequestFactory.swift */,
+				1641B68F26D3E8F100387758 /* RequestRouter.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1641B69126D3E91D00387758 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				16ED423226CE54F6005DB034 /* FirstViewController */,
+				16ED423326CE5509005DB034 /* HeroViewController */,
+				16ED423826CE5D4B005DB034 /* ResultFirstViewController */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		16D463D826D02982000B8A4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				16D463D926D029A0000B8A4D /* RequestFactory.swift */,
+				1641B68826D3E81300387758 /* HeroCatalog */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		16ED41F126CD5A80005DB034 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +240,8 @@
 				16ED421626CD5A82005DB034 /* SwiftSuperheroLibraryTests */,
 				16ED422126CD5A82005DB034 /* SwiftSuperheroLibraryUITests */,
 				16ED41FB26CD5A80005DB034 /* Products */,
+				0E3EDC2B8DD2489A9DAE3581 /* Pods */,
+				0F6E32D09BE919C22F1E557D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,15 +258,12 @@
 		16ED41FC26CD5A80005DB034 /* SwiftSuperheroLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				16ED41FD26CD5A80005DB034 /* AppDelegate.swift */,
-				16ED41FF26CD5A80005DB034 /* SceneDelegate.swift */,
-				16ED423226CE54F6005DB034 /* FirstViewController */,
-				16ED423826CE5D4B005DB034 /* ResultFirstViewController */,
-				16ED423326CE5509005DB034 /* HeroViewController */,
-				16ED420926CD5A82005DB034 /* Assets.xcassets */,
-				16ED420B26CD5A82005DB034 /* LaunchScreen.storyboard */,
-				16ED420E26CD5A82005DB034 /* Info.plist */,
+				1641B68326D3E75B00387758 /* App */,
+				1641B68926D3E84200387758 /* Core */,
+				1641B68526D3E78600387758 /* Resources */,
+				1641B68426D3E76F00387758 /* Environments */,
 				16ED420626CD5A80005DB034 /* SwiftSuperheroLibrary.xcdatamodeld */,
+				16ED420E26CD5A82005DB034 /* Info.plist */,
 			);
 			path = SwiftSuperheroLibrary;
 			sourceTree = "<group>";
@@ -168,6 +318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16ED422726CD5A82005DB034 /* Build configuration list for PBXNativeTarget "SwiftSuperheroLibrary" */;
 			buildPhases = (
+				5D22588F698FFCE00C4EA962 /* [CP] Check Pods Manifest.lock */,
 				16ED41F626CD5A80005DB034 /* Sources */,
 				16ED41F726CD5A80005DB034 /* Frameworks */,
 				16ED41F826CD5A80005DB034 /* Resources */,
@@ -185,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16ED422A26CD5A82005DB034 /* Build configuration list for PBXNativeTarget "SwiftSuperheroLibraryTests" */;
 			buildPhases = (
+				5EB4FA4548D731B2342595D9 /* [CP] Check Pods Manifest.lock */,
 				16ED420F26CD5A82005DB034 /* Sources */,
 				16ED421026CD5A82005DB034 /* Frameworks */,
 				16ED421126CD5A82005DB034 /* Resources */,
@@ -203,6 +355,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16ED422D26CD5A82005DB034 /* Build configuration list for PBXNativeTarget "SwiftSuperheroLibraryUITests" */;
 			buildPhases = (
+				E73D533BF0E2EB56016C1076 /* [CP] Check Pods Manifest.lock */,
 				16ED421A26CD5A82005DB034 /* Sources */,
 				16ED421B26CD5A82005DB034 /* Frameworks */,
 				16ED421C26CD5A82005DB034 /* Resources */,
@@ -285,18 +438,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D22588F698FFCE00C4EA962 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftSuperheroLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EB4FA4548D731B2342595D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftSuperheroLibraryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E73D533BF0E2EB56016C1076 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		16ED41F626CD5A80005DB034 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1641B68E26D3E8D700387758 /* AbstractRequestFactory.swift in Sources */,
+				16D463DC26D0FA3A000B8A4D /* AbstractErrorParser.swift in Sources */,
+				16D463DA26D029A0000B8A4D /* RequestFactory.swift in Sources */,
+				1641B68C26D3E8B300387758 /* ResponseCodable.swift in Sources */,
+				16D463E326D10274000B8A4D /* CatalogHeroReqestFactory.swift in Sources */,
+				1641B69326D3E98300387758 /* HeroCatalog.swift in Sources */,
 				16ED423526CE5525005DB034 /* HeroViewController.swift in Sources */,
 				16ED423A26CE5D7F005DB034 /* ResultFirstViewController.swift in Sources */,
 				16ED420226CD5A80005DB034 /* FirstTableViewController.swift in Sources */,
+				16D463DE26D0FA55000B8A4D /* ErrorParser.swift in Sources */,
 				16ED423726CE5550005DB034 /* HeroView.swift in Sources */,
 				16ED420826CD5A80005DB034 /* SwiftSuperheroLibrary.xcdatamodeld in Sources */,
+				1641B69026D3E8F100387758 /* RequestRouter.swift in Sources */,
+				16D463E126D0FABF000B8A4D /* CatalogHeroResult.swift in Sources */,
 				16ED41FE26CD5A80005DB034 /* AppDelegate.swift in Sources */,
 				16ED420026CD5A80005DB034 /* SceneDelegate.swift in Sources */,
+				1641B69526D3EA8900387758 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +693,7 @@
 		};
 		16ED422826CD5A82005DB034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94622228C4714D16B9A2ABD /* Pods-SwiftSuperheroLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +713,7 @@
 		};
 		16ED422926CD5A82005DB034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 574822AD3F806BAF34D764EA /* Pods-SwiftSuperheroLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -499,6 +733,7 @@
 		};
 		16ED422B26CD5A82005DB034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD452BF189B3E351D532E613 /* Pods-SwiftSuperheroLibraryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -521,6 +756,7 @@
 		};
 		16ED422C26CD5A82005DB034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F2BD66925AC4711C41B8AAC /* Pods-SwiftSuperheroLibraryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +779,7 @@
 		};
 		16ED422E26CD5A82005DB034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36B541507F9D139E53A00661 /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -563,6 +800,7 @@
 		};
 		16ED422F26CD5A82005DB034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8CF9EA089F2D6082EC2B50C /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

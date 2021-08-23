@@ -11,6 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
 	var navController: UINavigationController?
+	let factory = RequestFactory(baseUrl: UserSettings.baseUrl)
 
 	func scene(_ scene: UIScene,
 			   willConnectTo session: UISceneSession,
@@ -19,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window = UIWindow(frame: UIScreen.main.bounds)
 //		let factory = RequestFactory(baseUrl: UserSettings.baseUrl)
 //		let viewController = MainViewController(requestFactory: factory)
-		let viewController = FirstTableViewController()
+		let viewController = FirstTableViewController(requestFactory: factory)
 		navController = UINavigationController()
 		navController?.pushViewController(viewController, animated: false)
 		window?.rootViewController = navController

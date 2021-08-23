@@ -1,0 +1,6 @@
+module Pods_SwiftSuperheroLibrary {
+  umbrella header "Pods-SwiftSuperheroLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

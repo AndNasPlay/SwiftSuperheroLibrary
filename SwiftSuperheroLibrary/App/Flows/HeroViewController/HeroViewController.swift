@@ -8,6 +8,7 @@
 import UIKit
 
 class HeroViewController: UIViewController, HeroViewDelegate  {
+
 	func showMore() {
 
 	}
@@ -27,6 +28,4 @@ class HeroViewController: UIViewController, HeroViewDelegate  {
         super.viewDidLoad()
 
     }
-
-
 }
