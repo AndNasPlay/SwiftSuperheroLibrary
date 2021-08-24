@@ -35,7 +35,6 @@ extension RequestRouter {
 		urlRequest.httpMethod = method.rawValue
 		switch self.encoding {
 		case .url:
-			print(try! URLEncoding.default.encode(urlRequest, with: parameters))
 			return try URLEncoding.default.encode(urlRequest, with: parameters)
 		case .json:
 			return try JSONEncoding.default.encode(urlRequest, with: parameters)

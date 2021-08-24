@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABB7AE91436C4261D940C93C4921FB36"
-               BuildableName = "libPods-SwiftSuperheroLibraryTests.a"
-               BlueprintName = "Pods-SwiftSuperheroLibraryTests"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "16ED41F926CD5A80005DB034"
+               BuildableName = "SwiftSuperheroLibrary.app"
+               BlueprintName = "SwiftSuperheroLibrary"
+               ReferencedContainer = "container:SwiftSuperheroLibrary.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "16BD013C26D54BE8007F9B90"
+               BuildableName = "SwiftSuperheroLibraryTests.xctest"
+               BlueprintName = "SwiftSuperheroLibraryTests"
+               ReferencedContainer = "container:SwiftSuperheroLibrary.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -40,6 +50,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "16ED41F926CD5A80005DB034"
+            BuildableName = "SwiftSuperheroLibrary.app"
+            BlueprintName = "SwiftSuperheroLibrary"
+            ReferencedContainer = "container:SwiftSuperheroLibrary.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +67,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "16ED41F926CD5A80005DB034"
+            BuildableName = "SwiftSuperheroLibrary.app"
+            BlueprintName = "SwiftSuperheroLibrary"
+            ReferencedContainer = "container:SwiftSuperheroLibrary.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

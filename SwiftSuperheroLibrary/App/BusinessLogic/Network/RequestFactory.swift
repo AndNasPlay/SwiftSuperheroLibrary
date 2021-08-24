@@ -10,25 +10,25 @@ import Alamofire
 
 class RequestFactory {
 
-let baseUrl: URL
-init(baseUrl: URL) {
+	let baseUrl: URL
+	init(baseUrl: URL) {
 		self.baseUrl = baseUrl
 	}
 
-func makeErrorParser() -> AbstractErrorParser {
-	return ErrorParser()
-}
+	func makeErrorParser() -> AbstractErrorParser {
+		return ErrorParser()
+	}
 
-lazy var commonSession: Session = {
-	let configuration = URLSessionConfiguration.default
-	configuration.httpShouldSetCookies = false
-	configuration.headers = .default
-	let manager = Session(configuration: configuration)
-	return manager
-}()
-
-let sessionQueue = DispatchQueue.global(qos: .utility)
-let sessionCallBackQueue = DispatchQueue.main
+	lazy var commonSession: Session = {
+		let configuration = URLSessionConfiguration.default
+		configuration.httpShouldSetCookies = false
+		configuration.headers = .default
+		let manager = Session(configuration: configuration)
+		return manager
+	}()
+	
+	let sessionQueue = DispatchQueue.global(qos: .utility)
+	let sessionCallBackQueue = DispatchQueue.main
 
 	func makeHeroesRequestFatory() -> CatalogHeroReqestFactory {
 		let errorParser = makeErrorParser()
@@ -40,4 +40,13 @@ let sessionCallBackQueue = DispatchQueue.main
 		)
 	}
 
+	func makeSearchByNameRequestFatory() -> SearchByNameReqestFactory {
+		let errorParser = makeErrorParser()
+		return SearchByName(
+			errorParser: errorParser,
+			sessionManager: commonSession,
+			queue: sessionCallBackQueue,
+			baseUrl: baseUrl
+		)
+	}
 }

@@ -2,7 +2,7 @@
 //  SwiftSuperheroLibraryTests.swift
 //  SwiftSuperheroLibraryTests
 //
-//  Created by Андрей Щекатунов on 18.08.2021.
+//  Created by Андрей Щекатунов on 24.08.2021.
 //
 
 import XCTest
@@ -10,24 +10,43 @@ import XCTest
 
 class SwiftSuperheroLibraryTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+	var requestFactory: RequestFactory?
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+	override func setUpWithError() throws {
+		requestFactory = RequestFactory(baseUrl: UserSettings.baseUrl)
+	}
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+	override func tearDownWithError() throws {
+		requestFactory = nil
+	}
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+	func testGetCatalogHeroes() throws {
+		let getCatalogHeroes = try XCTUnwrap(requestFactory).makeHeroesRequestFatory()
+		let signedIn = expectation(description: "get catalog")
+		getCatalogHeroes.heroCatalog(limit: 1) { response in
+			switch response.result {
+			case .success(let hero):
+				XCTAssertEqual(hero.data?.count, 1)
+				signedIn.fulfill()
+			case .failure(let error):
+				XCTFail(error.localizedDescription)
+			}
+		}
+		waitForExpectations(timeout: 20)
+	}
 
+	func testGetHeroByName() throws {
+		let getHeroByName = try XCTUnwrap(requestFactory).makeSearchByNameRequestFatory()
+		let signedIn = expectation(description: "get hero")
+		getHeroByName.searchHeroByName(name: "hulk") { response in
+			switch response.result {
+			case .success(let hero):
+				XCTAssertEqual(hero.data?.results?.first?.name, "Hulk")
+				signedIn.fulfill()
+			case .failure(let error):
+				XCTFail(error.localizedDescription)
+			}
+		}
+		waitForExpectations(timeout: 20)
+	}
 }

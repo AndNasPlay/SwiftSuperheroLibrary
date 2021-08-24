@@ -1,15 +1,15 @@
 //
-//  HeroCatalog.swift
+//  SearchByName.swift
 //  SwiftSuperheroLibrary
 //
-//  Created by Андрей Щекатунов on 23.08.2021.
+//  Created by Андрей Щекатунов on 24.08.2021.
 //
 
 import Foundation
 import Alamofire
 import CryptoKit
 
-class HeroCatalog: AbstractRequestFactory, CatalogHeroReqestFactory {
+class SearchByName: AbstractRequestFactory, SearchByNameReqestFactory {
 
 	let errorParser: AbstractErrorParser
 	let sessionManager: Session
@@ -27,28 +27,27 @@ class HeroCatalog: AbstractRequestFactory, CatalogHeroReqestFactory {
 		self.baseUrl = baseUrl
 	}
 
-	func heroCatalog(limit: Int, completionHandler: @escaping (AFDataResponse<CatalogHeroResult>) -> Void) {
-		let requestModel = HeroCatalogRequest(
+	func searchHeroByName(name: String, completionHandler: @escaping (AFDataResponse<CatalogHeroResult>) -> Void) {
+		let requestModel = SearchHeroByNameRequest(
 			baseUrl: baseUrl,
-			limit: limit
+			name: name
 		)
 		self.request(request: requestModel, completionHandler: completionHandler)
 	}
 
-	struct HeroCatalogRequest: RequestRouter {
+	struct SearchHeroByNameRequest: RequestRouter {
 		let baseUrl: URL
 		let method: HTTPMethod = .get
 		let path: String = "characters"
-		let limit: Int
+		let name: String
 		var parameters: Parameters? {
 			return [
 				"ts" : UserSettings.ts,
 				"apikey" : UserSettings.publicKey,
 				"hash" : UserSettings.hash,
-				"limit" : "\(limit)"
+				"name" : name
 			]
 
 		}
 	}
 }
-
