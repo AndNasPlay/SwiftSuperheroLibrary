@@ -148,13 +148,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		1641B68426D3E76F00387758 /* Environments */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Environments;
-			sourceTree = "<group>";
-		};
 		1641B68526D3E78600387758 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +320,6 @@
 				1641B68326D3E75B00387758 /* App */,
 				1641B68926D3E84200387758 /* Core */,
 				1641B68526D3E78600387758 /* Resources */,
-				1641B68426D3E76F00387758 /* Environments */,
 				16ED420626CD5A80005DB034 /* SwiftSuperheroLibrary.xcdatamodeld */,
 				16ED420E26CD5A82005DB034 /* Info.plist */,
 			);
@@ -381,6 +373,7 @@
 				16ED41F626CD5A80005DB034 /* Sources */,
 				16ED41F726CD5A80005DB034 /* Frameworks */,
 				16ED41F826CD5A80005DB034 /* Resources */,
+				165C5DC726DC2851002D6A5E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -454,6 +447,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		165C5DC726DC2851002D6A5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
 		5D22588F698FFCE00C4EA962 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

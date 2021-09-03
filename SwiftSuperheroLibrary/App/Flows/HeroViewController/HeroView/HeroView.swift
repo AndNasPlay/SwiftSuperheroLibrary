@@ -78,7 +78,7 @@ class HeroView: UIView {
 
 			aboutHeroLable.topAnchor.constraint(equalTo: self.heroNameLable.bottomAnchor, constant: 20),
 			aboutHeroLable.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-			aboutHeroLable.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+			aboutHeroLable.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
 		])
 	}
 

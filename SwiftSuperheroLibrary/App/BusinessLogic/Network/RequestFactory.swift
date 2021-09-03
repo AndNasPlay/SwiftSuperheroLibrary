@@ -26,11 +26,11 @@ class RequestFactory {
 		let manager = Session(configuration: configuration)
 		return manager
 	}()
-	
+
 	let sessionQueue = DispatchQueue.global(qos: .utility)
 	let sessionCallBackQueue = DispatchQueue.main
 
-	func makeHeroesRequestFatory() -> CatalogHeroReqestFactory {
+	func makeHeroesRequestFactory() -> CatalogHeroReqestFactory {
 		let errorParser = makeErrorParser()
 		return HeroCatalog(
 			errorParser: errorParser,
@@ -40,7 +40,7 @@ class RequestFactory {
 		)
 	}
 
-	func makeSearchByNameRequestFatory() -> SearchByNameReqestFactory {
+	func makeSearchByNameRequestFactory() -> SearchByNameReqestFactory {
 		let errorParser = makeErrorParser()
 		return SearchByName(
 			errorParser: errorParser,

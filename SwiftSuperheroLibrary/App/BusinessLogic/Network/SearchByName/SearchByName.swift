@@ -42,10 +42,10 @@ class SearchByName: AbstractRequestFactory, SearchByNameReqestFactory {
 		let name: String
 		var parameters: Parameters? {
 			return [
-				"ts" : UserSettings.ts,
-				"apikey" : UserSettings.publicKey,
-				"hash" : UserSettings.hash,
-				"name" : name
+				"ts": UserSettings.tsForApi,
+				"apikey": UserSettings.publicKey,
+				"hash": UserSettings.hash,
+				"name": name
 			]
 
 		}

@@ -42,13 +42,11 @@ class HeroCatalog: AbstractRequestFactory, CatalogHeroReqestFactory {
 		let limit: Int
 		var parameters: Parameters? {
 			return [
-				"ts" : UserSettings.ts,
-				"apikey" : UserSettings.publicKey,
-				"hash" : UserSettings.hash,
-				"limit" : "\(limit)"
+				"ts": UserSettings.tsForApi,
+				"apikey": UserSettings.publicKey,
+				"hash": UserSettings.hash,
+				"limit": "\(limit)"
 			]
-
 		}
 	}
 }
-

@@ -21,7 +21,7 @@ class SwiftSuperheroLibraryTests: XCTestCase {
 	}
 
 	func testGetCatalogHeroes() throws {
-		let getCatalogHeroes = try XCTUnwrap(requestFactory).makeHeroesRequestFatory()
+		let getCatalogHeroes = try XCTUnwrap(requestFactory).makeHeroesRequestFactory()
 		let signedIn = expectation(description: "get catalog")
 		getCatalogHeroes.heroCatalog(limit: 1) { response in
 			switch response.result {
@@ -36,7 +36,7 @@ class SwiftSuperheroLibraryTests: XCTestCase {
 	}
 
 	func testGetHeroByName() throws {
-		let getHeroByName = try XCTUnwrap(requestFactory).makeSearchByNameRequestFatory()
+		let getHeroByName = try XCTUnwrap(requestFactory).makeSearchByNameRequestFactory()
 		let signedIn = expectation(description: "get hero")
 		getHeroByName.searchHeroByName(name: "hulk") { response in
 			switch response.result {

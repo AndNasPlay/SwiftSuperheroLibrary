@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroViewController: UIViewController, HeroViewDelegate  {
+class HeroViewController: UIViewController, HeroViewDelegate {
 
 	func showMore() {
 

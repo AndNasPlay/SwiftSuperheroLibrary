@@ -21,6 +21,8 @@ class HeroSearchCatalogTableViewController: UITableViewController {
 	}
 
 	private var tableCellHeight: CGFloat = 120.0
+	private let defaultImagePath: String = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+	private let defaultImageExtension: String = ".jpg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +38,7 @@ class HeroSearchCatalogTableViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-		let urlPhoto: String = "\(heroArr[indexPath.row].thumbnail["path"]!).\( heroArr[indexPath.row].thumbnail["extension"]!)"
+		let urlPhoto: String = "\(heroArr[indexPath.row].thumbnail["path"] ?? defaultImagePath).\( heroArr[indexPath.row].thumbnail["extension"] ?? defaultImageExtension)"
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: HeroCatalogTableViewCell.identifier,
 													  for: indexPath) as! HeroCatalogTableViewCell
 		cell.heroNameLabel.text = heroArr[indexPath.row].name

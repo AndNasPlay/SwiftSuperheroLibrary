@@ -66,7 +66,7 @@ class HeroSearchView: UIView {
 							   action: #selector(handleSearchTouchUpInseide),
 							   for: .touchUpInside)
 	}
-	
+
 	func constraintsInit() {
 		NSLayoutConstraint.activate([
 			instructionLable.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -82,7 +82,7 @@ class HeroSearchView: UIView {
 			searchButton.topAnchor.constraint(equalTo: self.searchTextField.bottomAnchor, constant: 20),
 			searchButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 100),
 			searchButton.heightAnchor.constraint(equalToConstant: 50),
-			searchButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -100),
+			searchButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -100)
 		])
 	}
 

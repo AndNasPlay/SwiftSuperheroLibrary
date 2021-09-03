@@ -9,8 +9,4 @@ target 'SwiftSuperheroLibrary' do
     # Pods for testing
   end
 
-  target 'SwiftSuperheroLibraryUITests' do
-    # Pods for testing
-  end
-
 end

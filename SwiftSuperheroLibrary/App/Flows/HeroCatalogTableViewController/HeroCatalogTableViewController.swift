@@ -9,7 +9,6 @@ import UIKit
 import Alamofire
 import SDWebImage
 
-
 class HeroCatalogTableViewController: UITableViewController {
 
 	let requestFactory: RequestFactory
@@ -25,6 +24,8 @@ class HeroCatalogTableViewController: UITableViewController {
 	private var heroArr = [HeroResult]()
 	private var tableCellHeight: CGFloat = 120.0
 	private let searchController = UISearchController(searchResultsController: nil)
+	private let defaultImagePath: String = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+	private let defaultImageExtension: String = ".jpg"
 
 	private var searchBarIsEmpty: Bool {
 		guard let text = searchController.searchBar.text else { return false }
@@ -39,7 +40,7 @@ class HeroCatalogTableViewController: UITableViewController {
 		guard !searchText.isEmpty else { return heroArr }
 		return heroArr.filter { hero in
 			return
-				(hero.name?.lowercased().contains(searchController.searchBar.text!.lowercased()))!
+				(hero.name?.lowercased().contains(searchController.searchBar.text!.lowercased())) ?? false
 		}
 	}
 
@@ -48,12 +49,14 @@ class HeroCatalogTableViewController: UITableViewController {
 	}
 
 	private func loadData() {
-		self.requestFactory.makeHeroesRequestFatory().heroCatalog(limit: 100) { response in
+		self.requestFactory.makeHeroesRequestFactory().heroCatalog(limit: 100) { response in
 			DispatchQueue.main.async {
 				switch response.result {
 				case .success(let catalog):
-					self.heroArr.append(contentsOf: (catalog.data?.results)!)
-					self.tableView.reloadData()
+					if (catalog.data?.results != nil) {
+						self.heroArr.append(contentsOf: (catalog.data?.results)!)
+						self.tableView.reloadData()
+					}
 				case .failure(let error):
 					print(error.localizedDescription)
 				}
@@ -87,9 +90,7 @@ class HeroCatalogTableViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-		let urlPhoto: String = "\(filteredHeroArr[indexPath.row].thumbnail["path"]!).\( filteredHeroArr[indexPath.row].thumbnail["extension"]!)"
-
+		let urlPhoto: String = "\(filteredHeroArr[indexPath.row].thumbnail["path"] ?? defaultImagePath).\( filteredHeroArr[indexPath.row].thumbnail["extension"] ?? defaultImageExtension)"
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: HeroCatalogTableViewCell.identifier,
 													  for: indexPath) as! HeroCatalogTableViewCell
 
@@ -100,12 +101,11 @@ class HeroCatalogTableViewController: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-		let urlPhoto: String = "\(filteredHeroArr[indexPath.row].thumbnail["path"]!).\( filteredHeroArr[indexPath.row].thumbnail["extension"]!)"
-
+		let urlPhoto: String = "\(filteredHeroArr[indexPath.row].thumbnail["path"] ?? defaultImagePath).\( filteredHeroArr[indexPath.row].thumbnail["extension"] ?? defaultImageExtension)"
 		let detailViewController = HeroViewController()
 		detailViewController.heroView.heroNameLable.text = filteredHeroArr[indexPath.row].name
-		detailViewController.heroView.heroPhoto.sd_setImage(with: URL(string: urlPhoto), placeholderImage: UIImage(named: "heroTestImg"))
+		detailViewController.heroView.heroPhoto.sd_setImage(with: URL(string: urlPhoto),
+															placeholderImage: UIImage(named: "heroTestImg"))
 		detailViewController.heroView.aboutHeroLable.text = filteredHeroArr[indexPath.row].description
 		navigationController?.pushViewController(detailViewController, animated: true)
 	}
@@ -126,7 +126,7 @@ extension HeroCatalogTableViewController: UISearchResultsUpdating {
 			if isFiltering {
 				return heroArr.filter { hero in
 					return
-						(hero.name?.lowercased().contains(searchController.searchBar.text!.lowercased()))!
+						(hero.name?.lowercased().contains(searchController.searchBar.text!.lowercased())) ?? false
 				}
 			} else {
 				return heroArr
@@ -135,4 +135,3 @@ extension HeroCatalogTableViewController: UISearchResultsUpdating {
 		tableView.reloadData()
 	}
 }
-

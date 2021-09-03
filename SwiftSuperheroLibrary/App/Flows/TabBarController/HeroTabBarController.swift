@@ -32,9 +32,10 @@ class HeroTabBarController: UITabBarController {
 		]
 	}
 
-	fileprivate func createNavController(for rootViewController: UIViewController,
-										 title: String,
-										 image: UIImage) -> UIViewController {
+	fileprivate func createNavController(
+		for rootViewController: UIViewController,
+		title: String,
+		image: UIImage) -> UIViewController {
 		let navController = UINavigationController(rootViewController: rootViewController)
 		navController.tabBarItem.title = title
 		navController.tabBarItem.image = image
