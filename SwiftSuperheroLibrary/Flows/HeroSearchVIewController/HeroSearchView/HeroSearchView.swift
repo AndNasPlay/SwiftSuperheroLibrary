@@ -13,6 +13,12 @@ protocol HeroSearchViewDelegate: AnyObject {
 
 class HeroSearchView: UIView {
 
+	private let instructionLableTopAnchor: CGFloat = 200.0
+	private let leadingTrailingAnchor: CGFloat = 20.0
+	private let searchButtonleadingTrailingAnchor: CGFloat = 100.0
+	private let searchButtonHeightAnchor: CGFloat = 50.0
+	private let searchButtonSearchTextFieldTopAnchor: CGFloat = 50.0
+
 	weak var delegate: HeroSearchViewDelegate?
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -70,19 +76,19 @@ class HeroSearchView: UIView {
 	func constraintsInit() {
 		NSLayoutConstraint.activate([
 			instructionLable.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-			instructionLable.topAnchor.constraint(equalTo: self.topAnchor, constant: 200),
-			instructionLable.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-			instructionLable.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+			instructionLable.topAnchor.constraint(equalTo: self.topAnchor, constant: instructionLableTopAnchor),
+			instructionLable.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingTrailingAnchor),
+			instructionLable.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -leadingTrailingAnchor),
 			instructionLable.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -100),
 
-			searchTextField.topAnchor.constraint(equalTo: self.instructionLable.bottomAnchor, constant: 50),
-			searchTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-			searchTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+			searchTextField.topAnchor.constraint(equalTo: self.instructionLable.bottomAnchor, constant: searchButtonSearchTextFieldTopAnchor),
+			searchTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingTrailingAnchor),
+			searchTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -leadingTrailingAnchor),
 
-			searchButton.topAnchor.constraint(equalTo: self.searchTextField.bottomAnchor, constant: 20),
-			searchButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 100),
-			searchButton.heightAnchor.constraint(equalToConstant: 50),
-			searchButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -100)
+			searchButton.topAnchor.constraint(equalTo: self.searchTextField.bottomAnchor, constant: searchButtonSearchTextFieldTopAnchor),
+			searchButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: searchButtonleadingTrailingAnchor),
+			searchButton.heightAnchor.constraint(equalToConstant: searchButtonHeightAnchor),
+			searchButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -searchButtonleadingTrailingAnchor)
 		])
 	}
 

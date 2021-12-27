@@ -7,7 +7,6 @@
 
 import Foundation
 import Alamofire
-import CryptoKit
 
 class HeroCatalog: AbstractRequestFactory, CatalogHeroReqestFactory {
 

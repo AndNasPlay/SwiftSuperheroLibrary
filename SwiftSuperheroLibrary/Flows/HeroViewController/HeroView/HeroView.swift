@@ -34,7 +34,7 @@ class HeroView: UIView {
 		imageView.layer.cornerRadius = 8
 		imageView.clipsToBounds = true
 		imageView.layer.borderColor = UIColor.lightGray.cgColor
-		imageView.layer.borderWidth = 2 
+		imageView.layer.borderWidth = 2
 		return imageView
 	}()
 

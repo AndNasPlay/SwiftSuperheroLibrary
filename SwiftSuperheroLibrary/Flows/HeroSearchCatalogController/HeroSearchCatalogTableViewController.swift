@@ -39,6 +39,7 @@ class HeroSearchCatalogTableViewController: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let urlPhoto: String = "\(heroArr[indexPath.row].thumbnail["path"] ?? defaultImagePath).\( heroArr[indexPath.row].thumbnail["extension"] ?? defaultImageExtension)"
+
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: HeroCatalogTableViewCell.identifier,
 													  for: indexPath) as! HeroCatalogTableViewCell
 		cell.heroNameLabel.text = heroArr[indexPath.row].name
