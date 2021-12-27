@@ -23,12 +23,12 @@ class HeroTabBarController: UITabBarController {
 
 	func setupVCs() {
 		viewControllers = [
-			createNavController(for: HeroCatalogTableViewController(requestFactory: factory),
-								title: NSLocalizedString("Hero Catalog", comment: ""),
-								image: UIImage(systemName: "house")!),
 			createNavController(for: HeroSearchViewController(requestFactory: factory),
 								title: NSLocalizedString("Search Hero", comment: ""),
-								image: UIImage(systemName: "magnifyingglass")!)
+								image: UIImage(systemName: "magnifyingglass")!),
+			createNavController(for: HeroCatalogTableViewController(requestFactory: factory),
+								title: NSLocalizedString("Hero Catalog", comment: ""),
+								image: UIImage(systemName: "house")!)
 		]
 	}
 
@@ -39,8 +39,6 @@ class HeroTabBarController: UITabBarController {
 		let navController = UINavigationController(rootViewController: rootViewController)
 		navController.tabBarItem.title = title
 		navController.tabBarItem.image = image
-		navController.navigationBar.prefersLargeTitles = true
-		rootViewController.navigationItem.title = title
 		return navController
 	}
 }

@@ -29,6 +29,7 @@ class HeroSearchCatalogTableViewController: UITableViewController {
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
 		self.tableView.backgroundColor = .white
+		self.navigationController?.navigationBar.isHidden = false
 
 		self.tableView.register(HeroCatalogTableViewCell.self, forCellReuseIdentifier: HeroCatalogTableViewCell.identifier)
     }

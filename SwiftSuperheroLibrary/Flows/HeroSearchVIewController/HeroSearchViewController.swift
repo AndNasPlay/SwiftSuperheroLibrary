@@ -22,6 +22,8 @@ class HeroSearchViewController: UIViewController, HeroSearchViewDelegate {
 
 	private var heroArr = [HeroResult]()
 
+	var heroSearchView = HeroSearchView()
+
 	private func loadData() {
 		self.heroArr.removeAll()
 		self.requestFactory.makeSearchByNameRequestFactory().searchHeroByName(
@@ -45,16 +47,20 @@ class HeroSearchViewController: UIViewController, HeroSearchViewDelegate {
 		loadData()
 	}
 
-	var heroSearchView = HeroSearchView()
-
 	override func loadView() {
 		heroSearchView.delegate = self
 		view = heroSearchView
+		self.heroSearchView.applyGradient(colours: [.black, .red])
 	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		self.navigationController?.navigationBar.isHidden = true
     }
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(true)
+		self.navigationController?.navigationBar.isHidden = true
+	}
 
 }
