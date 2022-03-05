@@ -34,6 +34,7 @@
 		16ED420D26CD5A82005DB034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16ED420B26CD5A82005DB034 /* LaunchScreen.storyboard */; };
 		16ED423526CE5525005DB034 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED423426CE5525005DB034 /* HeroViewController.swift */; };
 		16ED423726CE5550005DB034 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16ED423626CE5550005DB034 /* HeroView.swift */; };
+		16F42BBC27D3E4DE0072BECB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F42BBB27D3E4DE0072BECB /* UIColorExtension.swift */; };
 		47CFBF31343835E863B21A02 /* libPods-SwiftSuperheroLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E933F4490EFB44A1B11919 /* libPods-SwiftSuperheroLibrary.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		16ED420E26CD5A82005DB034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16ED423426CE5525005DB034 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		16ED423626CE5550005DB034 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		16F42BBB27D3E4DE0072BECB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		16FE3FEC26D4F2DE00742BAB /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		36B541507F9D139E53A00661 /* Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests/Pods-SwiftSuperheroLibrary-SwiftSuperheroLibraryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		574822AD3F806BAF34D764EA /* Pods-SwiftSuperheroLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSuperheroLibrary.release.xcconfig"; path = "Target Support Files/Pods-SwiftSuperheroLibrary/Pods-SwiftSuperheroLibrary.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				16ED420B26CD5A82005DB034 /* LaunchScreen.storyboard */,
 				16ED420926CD5A82005DB034 /* Assets.xcassets */,
+				16F42BBB27D3E4DE0072BECB /* UIColorExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				16662FBE26D534200009137F /* HeroTabBarController.swift in Sources */,
 				16ED420226CD5A80005DB034 /* HeroCatalogTableViewController.swift in Sources */,
 				16D463DE26D0FA55000B8A4D /* ErrorParser.swift in Sources */,
+				16F42BBC27D3E4DE0072BECB /* UIColorExtension.swift in Sources */,
 				16ED423726CE5550005DB034 /* HeroView.swift in Sources */,
 				16ED420826CD5A80005DB034 /* SwiftSuperheroLibrary.xcdatamodeld in Sources */,
 				16662FB926D51BC20009137F /* HeroSearchViewController.swift in Sources */,

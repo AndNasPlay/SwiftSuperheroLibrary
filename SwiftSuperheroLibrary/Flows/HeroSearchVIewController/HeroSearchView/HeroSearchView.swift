@@ -13,15 +13,20 @@ protocol HeroSearchViewDelegate: AnyObject {
 
 class HeroSearchView: UIView {
 
-	private let instructionLableTopAnchor: CGFloat = 50.0
+	private let instructionLableTopAnchor: CGFloat = 30.0
 	private let leadingTrailingAnchor: CGFloat = 20.0
 	private let searchButtonleadingTrailingAnchor: CGFloat = 50.0
 	private let searchButtonHeightAnchor: CGFloat = 50.0
-	private let searchButtonSearchTextFieldTopAnchor: CGFloat = 50.0
+	private let searchButtonSearchTextFieldTopAnchor: CGFloat = 30.0
+	private let logoHeightAnchor: CGFloat = 200.0
+	private let gradientLayer = CAGradientLayer()
 
 	weak var delegate: HeroSearchViewDelegate?
+
 	override init(frame: CGRect) {
-		super.init(frame: frame) 
+		super.init(frame: frame)
+		setupGradient()
+		self.translatesAutoresizingMaskIntoConstraints = false
 		createSubviews()
 		constraintsInit()
 	}
@@ -46,7 +51,8 @@ class HeroSearchView: UIView {
 		text.textColor = .black
 		text.textAlignment = .center
 		text.numberOfLines = 0
-		text.font = UIFont(name: "Helvetica-Bold", size: 20.0)
+		text.font = UIFont(name: "Helvetica-Bold", size: 16.0)
+		text.adjustsFontSizeToFitWidth = true
 		text.text = "What MARVEL character would you like to learn mone about?"
 		return text
 	}()
@@ -69,8 +75,9 @@ class HeroSearchView: UIView {
 		searchTF.translatesAutoresizingMaskIntoConstraints = false
 		return searchTF
 	}()
+	
 
-	func createSubviews() {
+	private func createSubviews() {
 		self.addSubview(instructionLable)
 		self.addSubview(searchButton)
 		self.addSubview(searchTextField)
@@ -80,42 +87,52 @@ class HeroSearchView: UIView {
 							   for: .touchUpInside)
 	}
 
-	func constraintsInit() {
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		gradientLayer.frame = bounds
+	}
+
+	private func setupGradient() {
+		self.layer.addSublayer(gradientLayer)
+		gradientLayer.colors = [UIColor.mainViewFirstColor.cgColor, UIColor.mainViewSecondColor.cgColor]
+	}
+
+	private func constraintsInit() {
 		NSLayoutConstraint.activate([
 
-			logoImg.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: leadingTrailingAnchor),
-			logoImg.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: leadingTrailingAnchor),
-			logoImg.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -leadingTrailingAnchor),
-			logoImg.heightAnchor.constraint(equalToConstant: 200.0),
+			logoImg.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,
+										 constant: leadingTrailingAnchor),
+			logoImg.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
+										  constant: leadingTrailingAnchor),
+			logoImg.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
+										   constant: -leadingTrailingAnchor),
+			logoImg.heightAnchor.constraint(equalToConstant: logoHeightAnchor),
 
-			instructionLable.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-			instructionLable.topAnchor.constraint(equalTo: self.logoImg.bottomAnchor, constant: instructionLableTopAnchor),
-			instructionLable.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingTrailingAnchor),
-			instructionLable.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -leadingTrailingAnchor),
+			instructionLable.topAnchor.constraint(equalTo: logoImg.bottomAnchor,
+													 constant: instructionLableTopAnchor),
+			instructionLable.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+													  constant: leadingTrailingAnchor),
+			instructionLable.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+													   constant: -leadingTrailingAnchor),
 
-			searchTextField.topAnchor.constraint(equalTo: self.instructionLable.bottomAnchor, constant: searchButtonSearchTextFieldTopAnchor),
-			searchTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: leadingTrailingAnchor),
-			searchTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -leadingTrailingAnchor),
+			searchTextField.topAnchor.constraint(equalTo: instructionLable.bottomAnchor,
+												 constant: searchButtonSearchTextFieldTopAnchor),
+			searchTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+													 constant: leadingTrailingAnchor),
+			searchTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+													  constant: -leadingTrailingAnchor),
 
-			searchButton.topAnchor.constraint(equalTo: self.searchTextField.bottomAnchor, constant: searchButtonSearchTextFieldTopAnchor),
-			searchButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: searchButtonleadingTrailingAnchor),
+			searchButton.topAnchor.constraint(equalTo: self.searchTextField.bottomAnchor,
+											  constant: searchButtonSearchTextFieldTopAnchor),
+			searchButton.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+												  constant: searchButtonleadingTrailingAnchor),
 			searchButton.heightAnchor.constraint(equalToConstant: searchButtonHeightAnchor),
-			searchButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -searchButtonleadingTrailingAnchor)
+			searchButton.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+												   constant: -searchButtonleadingTrailingAnchor)
 		])
 	}
 
 	@objc func handleSearchTouchUpInseide() {
 		delegate?.search()
-	}
-}
-
-extension UIView {
-	func applyGradient(colours: [UIColor]) -> Void {
-		let gradient: CAGradientLayer = CAGradientLayer()
-		gradient.frame = self.bounds
-		gradient.colors = colours.map { $0.cgColor }
-		gradient.startPoint = CGPoint(x : 0.0, y : 0.5)
-		gradient.endPoint = CGPoint(x :1.0, y: 0.5)
-		self.layer.insertSublayer(gradient, at: 0)
 	}
 }
