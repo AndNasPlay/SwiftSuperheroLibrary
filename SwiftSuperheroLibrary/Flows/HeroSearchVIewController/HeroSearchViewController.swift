@@ -60,7 +60,7 @@ class HeroSearchViewController: UIViewController, HeroSearchViewDelegate, UIScro
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.navigationController?.navigationBar.isHidden = true
-		self.view.backgroundColor = UIColor.mainViewFirstColor
+		self.heroSearchView.translatesAutoresizingMaskIntoConstraints = false
 		self.view.addSubview(mainScrollView)
 		self.mainScrollView.addSubview(heroSearchView)
 		mainScrollView.delegate = self
@@ -127,6 +127,7 @@ class HeroSearchViewController: UIViewController, HeroSearchViewDelegate, UIScro
 	}
 
 	private func removeObserverForKeyboard() {
+
 		NotificationCenter.default.removeObserver(self,
 												  name: UIResponder.keyboardWillShowNotification,
 												  object: nil)

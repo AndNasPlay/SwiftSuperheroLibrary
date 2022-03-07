@@ -19,14 +19,11 @@ class HeroSearchView: UIView {
 	private let searchButtonHeightAnchor: CGFloat = 50.0
 	private let searchButtonSearchTextFieldTopAnchor: CGFloat = 30.0
 	private let logoHeightAnchor: CGFloat = 200.0
-	private let gradientLayer = CAGradientLayer()
 
 	weak var delegate: HeroSearchViewDelegate?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		setupGradient()
-		self.translatesAutoresizingMaskIntoConstraints = false
 		createSubviews()
 		constraintsInit()
 	}
@@ -41,7 +38,6 @@ class HeroSearchView: UIView {
 		let image = UIImageView()
 		image.translatesAutoresizingMaskIntoConstraints = false
 		image.image = UIImage(named: "logoImg")
-
 		return image
 	}()
 
@@ -87,29 +83,19 @@ class HeroSearchView: UIView {
 							   for: .touchUpInside)
 	}
 
-	override func layoutSubviews() {
-		super.layoutSubviews()
-		gradientLayer.frame = bounds
-	}
-
-	private func setupGradient() {
-		self.layer.addSublayer(gradientLayer)
-		gradientLayer.colors = [UIColor.mainViewFirstColor.cgColor, UIColor.mainViewSecondColor.cgColor]
-	}
-
 	private func constraintsInit() {
 		NSLayoutConstraint.activate([
 
 			logoImg.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor,
 										 constant: leadingTrailingAnchor),
 			logoImg.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor,
-										  constant: leadingTrailingAnchor),
+											 constant: leadingTrailingAnchor),
 			logoImg.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor,
-										   constant: -leadingTrailingAnchor),
+											  constant: -leadingTrailingAnchor),
 			logoImg.heightAnchor.constraint(equalToConstant: logoHeightAnchor),
 
 			instructionLable.topAnchor.constraint(equalTo: logoImg.bottomAnchor,
-													 constant: instructionLableTopAnchor),
+												  constant: instructionLableTopAnchor),
 			instructionLable.leadingAnchor.constraint(equalTo: self.leadingAnchor,
 													  constant: leadingTrailingAnchor),
 			instructionLable.trailingAnchor.constraint(equalTo: self.trailingAnchor,
