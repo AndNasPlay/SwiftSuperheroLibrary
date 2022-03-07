@@ -17,7 +17,8 @@ class HeroSearchCatalogTableViewController: UITableViewController {
 	}
 
 	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		self.heroArr = [HeroResult]()
+		super.init(coder: coder)
 	}
 
 	private var tableCellHeight: CGFloat = 120.0
@@ -48,6 +49,16 @@ class HeroSearchCatalogTableViewController: UITableViewController {
 		cell.heroImageView.sd_setImage(with: URL(string: urlPhoto), placeholderImage: UIImage(named: "heroTestImg"))
 
 		return cell
+	}
+
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let urlPhoto: String = "\(heroArr[indexPath.row].thumbnail["path"] ?? defaultImagePath).\( heroArr[indexPath.row].thumbnail["extension"] ?? defaultImageExtension)"
+		let detailViewController = HeroViewController()
+		detailViewController.heroView.heroNameLable.text = heroArr[indexPath.row].name
+		detailViewController.heroView.heroPhoto.sd_setImage(with: URL(string: urlPhoto),
+															placeholderImage: UIImage(named: "heroTestImg"))
+		detailViewController.heroView.aboutHeroLable.text = heroArr[indexPath.row].description
+		navigationController?.pushViewController(detailViewController, animated: true)
 	}
 
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

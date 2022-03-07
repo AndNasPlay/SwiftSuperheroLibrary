@@ -18,7 +18,8 @@ class HeroCatalogTableViewController: UITableViewController {
 	}
 
 	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		self.requestFactory = RequestFactory(baseUrl: UserSettings.baseUrl)
+		super.init(coder: coder)
 	}
 
 	private var heroArr = [HeroResult]()

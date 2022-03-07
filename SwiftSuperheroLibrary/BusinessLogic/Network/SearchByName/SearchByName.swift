@@ -15,6 +15,7 @@ class SearchByName: AbstractRequestFactory, SearchByNameReqestFactory {
 	let sessionManager: Session
 	let queue: DispatchQueue
 	let baseUrl: URL
+
 	init(
 		errorParser: AbstractErrorParser,
 		sessionManager: Session,

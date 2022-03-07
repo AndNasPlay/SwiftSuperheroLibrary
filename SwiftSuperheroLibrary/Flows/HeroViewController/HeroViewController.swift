@@ -9,13 +9,9 @@ import UIKit
 
 class HeroViewController: UIViewController, HeroViewDelegate {
 
-	func showMore() {
+	func showMore() { }
 
-	}
-
-	func showDetailInformation() {
-
-	}
+	func showDetailInformation() { }
 
 	var heroView = HeroView()
 
