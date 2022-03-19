@@ -14,7 +14,7 @@ Swift Programming Language, Custom UITableViewCell, UIKit, Foundation, SDWebImag
 
 ## Requirements
 
-Xcode 13.2.1
+Xcode 12.5
 iOS 14.5
 
 ## Author
